@@ -1011,6 +1011,10 @@
             .footer-section a {
                 font-size: 0.85rem;
             }
+
+            .calculators-grid {
+                gap: 3rem !important;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1058,6 +1062,11 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1.5rem;
             }
+
+            .calculators-grid {
+                grid-template-columns: 1fr !important;
+                gap: 3rem !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1081,6 +1090,10 @@
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .calculator-card {
+                padding: 2rem 1.5rem !important;
             }
         }
 
@@ -1120,8 +1133,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="#features">AMC Partners</a></li>
+                <li><a href="#calculators">Calculators</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-btn">Become a Partner</a>
@@ -1142,11 +1155,11 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Leading Individual Mutual Fund Distributor</h1>
-                <p>Invest in Mutual Funds, SIPs, Fixed Deposits, and build your wealth with India's most trusted financial platform. Expert guidance, transparent processes, and cutting-edge technology for your financial success.</p>
+                <h1>Expert Mutual Fund Distributor</h1>
+                <p>Invest in top-performing Mutual Funds and comprehensive Insurance solutions through our 100% paperless platform. Partnered with India's leading AMCs for your financial success with complete transparency.</p>
                 <div class="hero-cta">
-                    <a href="#services" class="btn-primary"><span>Start Investing Today</span></a>
-                    <a href="#features" class="btn-secondary">Explore Products</a>
+                    <a href="#services" class="btn-primary"><span>Start Your SIP Today</span></a>
+                    <a href="#calculators" class="btn-secondary">Use Our Calculators</a>
                 </div>
             </div>
         </div>
@@ -1156,39 +1169,39 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <h2>Our Investment Solutions</h2>
-                <p>Comprehensive financial products and services designed to help you build and grow your wealth systematically with expert guidance and cutting-edge technology</p>
+                <h2>Our Mutual Fund & Insurance Solutions</h2>
+                <p>Comprehensive Mutual Fund and Insurance products from India's top AMCs with 100% paperless processes and complete transparency through official AMC mobile applications</p>
             </div>
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon">📊</div>
-                    <h3>Mutual Funds</h3>
-                    <p>Access to 800+ mutual fund schemes across equity, debt, and hybrid categories with expert recommendations and real-time portfolio tracking.</p>
+                    <div class="service-icon">📈</div>
+                    <h3>Equity Mutual Funds</h3>
+                    <p>High-growth equity schemes from HDFC MF, SBI MF, Aditya Birla MF for long-term wealth creation with expert fund manager selection.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🏦</div>
+                    <h3>Debt Mutual Funds</h3>
+                    <p>Stable income-generating debt funds from top AMCs including Nippon India MF and Motilal Oswal MF for conservative investors.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <div class="service-icon">💰</div>
                     <h3>SIP Investments</h3>
-                    <p>Start your systematic investment plan with as low as ₹500 per month and build wealth through disciplined, automated investing.</p>
-                </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">🏦</div>
-                    <h3>Fixed Deposits</h3>
-                    <p>Secure your money with high-yield fixed deposits from top banks and corporates with competitive interest rates and flexible tenure.</p>
+                    <p>Start SIP with just ₹500/month across all leading AMCs. Automated investing with complete transparency through AMC apps.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <div class="service-icon">🛡️</div>
-                    <h3>Insurance Plans</h3>
-                    <p>Comprehensive life and health insurance solutions to protect your family's financial future and ensure complete peace of mind.</p>
-                </div>
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">📈</div>
-                    <h3>PMS & AIF</h3>
-                    <p>Portfolio Management Services and Alternative Investment Funds for sophisticated investors seeking alpha returns and diversification.</p>
+                    <h3>Life Insurance</h3>
+                    <p>Comprehensive life insurance plans including Term, ULIP, and Endowment policies to secure your family's financial future.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <div class="service-icon">💳</div>
-                    <h3>Tax Saving</h3>
-                    <p>ELSS mutual funds and tax-saving instruments to help you save taxes under Section 80C while building long-term wealth simultaneously.</p>
+                    <h3>ELSS Tax Saver</h3>
+                    <p>Tax-saving mutual funds under Section 80C from all major AMCs with potential for high returns and 3-year lock-in period.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🏥</div>
+                    <h3>Health Insurance</h3>
+                    <p>Complete health insurance coverage for individuals and families with cashless treatments and comprehensive medical benefits.</p>
                 </div>
             </div>
         </div>
@@ -1198,34 +1211,58 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <h2>Why Choose WealthPro</h2>
-                <p>Advanced technology meets personalized service to deliver an exceptional investment experience with complete transparency and professional guidance</p>
+                <h2>Why Choose Our MF Distribution</h2>
+                <p>100% paperless mutual fund investments with complete transparency through leading AMC partnerships and direct access to official mobile applications</p>
             </div>
             <div class="features-grid">
                 <div class="features-content animate-on-scroll">
-                    <h3>World-Class Platform Features</h3>
-                    <p>Our technology-driven approach ensures seamless investment management with complete transparency, real-time tracking, and personalized recommendations.</p>
+                    <h3>Paperless & Transparent Platform</h3>
+                    <p>Experience completely paperless mutual fund investments with real-time tracking through official AMC mobile applications and direct account access.</p>
                     <ul class="features-list">
-                        <li>Zero brokerage charges on mutual fund investments</li>
-                        <li>Real-time portfolio tracking and analytics dashboard</li>
-                        <li>Family account management with multiple portfolios</li>
-                        <li>Expert research and AI-powered investment recommendations</li>
-                        <li>Automated SIP and goal-based investing tools</li>
-                        <li>24/7 customer support and dedicated relationship manager</li>
-                        <li>Award-winning mobile app with advanced features</li>
-                        <li>Comprehensive tax optimization and planning tools</li>
+                        <li>100% paperless KYC and investment process</li>
+                        <li>Direct access to HDFC MF, SBI MF, Aditya Birla MF apps</li>
+                        <li>Real-time portfolio tracking through Motilal Oswal MF app</li>
+                        <li>Transparent NAV updates via Nippon India MF platform</li>
+                        <li>Instant transaction confirmations and statements</li>
                     </ul>
                 </div>
                 <div class="features-visual animate-on-scroll">
-                    <h3>📱 Award-Winning Mobile App</h3>
+                    <h3>📱 AMC Integration</h3>
                     <div class="app-mockup">
-                        <div style="font-size: 3rem;">📱</div>
+                        <div style="font-size: 2.5rem;">🏦</div>
                     </div>
-                    <p>Track, Plan & Invest in Mutual Funds, SIPs, FDs, and Insurance with our revolutionary mobile application.</p>
+                    <p>Direct integration with leading AMC platforms for complete transparency and control over your investments.</p>
                     <div style="margin-top: 2rem;">
-                        <p><strong>75,000+</strong> Active Users</p>
-                        <p><strong>4.8★</strong> App Store Rating</p>
-                        <p><strong>₹750Cr+</strong> Assets Under Management</p>
+                        <p><strong>5 Major AMCs</strong> Partnership</p>
+                        <p><strong>100%</strong> Paperless Process</p>
+                        <p><strong>₹5Cr+</strong> Assets Under Advisory</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMC Partners Section -->
+            <div style="margin-top: 5rem; text-align: center;">
+                <h3 style="margin-bottom: 2rem; color: var(--navy-text);">Our AMC Partners</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--light-green);">
+                        <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">HDFC Mutual Fund</h4>
+                        <p style="font-size: 0.9rem; color: #666;">India's largest AMC with ₹4.5L+ Cr AUM</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--light-green);">
+                        <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">SBI Mutual Fund</h4>
+                        <p style="font-size: 0.9rem; color: #666;">Trusted public sector AMC with strong performance</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--light-green);">
+                        <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Aditya Birla MF</h4>
+                        <p style="font-size: 0.9rem; color: #666;">Pioneer in Indian mutual fund industry</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--light-green);">
+                        <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Motilal Oswal MF</h4>
+                        <p style="font-size: 0.9rem; color: #666;">Research-driven investment approach</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--light-green);">
+                        <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Nippon India MF</h4>
+                        <p style="font-size: 0.9rem; color: #666;">Global expertise with local insights</p>
                     </div>
                 </div>
             </div>
@@ -1235,61 +1272,148 @@
     <!-- Statistics Section -->
     <section class="stats-section">
         <div class="container">
-            <h2 class="animate-on-scroll">Join Our Success Story</h2>
-            <p class="animate-on-scroll">Become a WealthPro Partner and build a successful wealth management career with our comprehensive support and industry-leading platform</p>
+            <h2 class="animate-on-scroll">Start Your Mutual Fund Journey</h2>
+            <p class="animate-on-scroll">Join thousands of investors who trust our paperless platform for their mutual fund investments with leading AMCs</p>
             <div class="stats">
-                <div class="stat-item animate-on-scroll" data-target="1500">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Active Partners</span>
+                <div class="stat-item animate-on-scroll" data-target="5">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Leading AMC Partners</span>
                 </div>
-                <div class="stat-item animate-on-scroll" data-target="4">
-                    <span class="stat-number">₹0L</span>
-                    <span class="stat-label">Average Monthly Earnings</span>
+                <div class="stat-item animate-on-scroll" data-target="2500">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Happy Investors</span>
                 </div>
-                <div class="stat-item animate-on-scroll" data-target="800">
-                    <span class="stat-number">0+</span>
-                    <span class="stat-label">Financial Products</span>
+                <div class="stat-item animate-on-scroll" data-target="5" data-type="cr">
+                    <span class="stat-number">₹50Cr+</span>
+                    <span class="stat-label">Assets Under Advisory</span>
                 </div>
-                <div class="stat-item animate-on-scroll" data-target="75000">
-                    <span class="stat-number">0+</span>
-                    <span class="stat-label">Happy Clients</span>
+                <div class="stat-item animate-on-scroll" data-target="100">
+                    <span class="stat-number">0%</span>
+                    <span class="stat-label">Paperless Process</span>
                 </div>
             </div>
-            <a href="#contact" class="btn-primary animate-on-scroll"><span>Become a Partner Today</span></a>
+            <a href="#contact" class="btn-primary animate-on-scroll"><span>Start Investing Today</span></a>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team">
+    <!-- Calculators Section -->
+    <section id="calculators" class="team">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <h2>Expert Leadership Team</h2>
-                <p>Our leadership brings decades of experience in wealth management, financial services, and technology innovation to serve you better</p>
+                <h2>Investment Calculators</h2>
+                <p>Plan your investments with our interactive SIP and Lump Sum calculators to understand potential returns and make informed decisions</p>
             </div>
-            <div class="team-grid">
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar">AK</div>
-                    <h4>Arun Kumar</h4>
-                    <div class="team-role">CEO & Co-Founder</div>
-                    <p class="team-bio">IIT-IIM alumnus with 18+ years in financial services. Previously VP at Goldman Sachs and Deutsche Bank, leading digital transformation initiatives.</p>
+            <div class="calculators-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 5rem;">
+                <!-- SIP Calculator -->
+                <div class="calculator-card animate-on-scroll" style="background: white; border-radius: 25px; padding: 3rem 2.5rem; box-shadow: 0 15px 50px rgba(16, 185, 129, 0.1); transition: all 0.4s ease;">
+                    <h3 style="color: var(--navy-text); margin-bottom: 2rem; text-align: center; font-size: 1.8rem;">SIP Calculator</h3>
+                    <div class="calculator-form">
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--primary-emerald); font-weight: 600;">Monthly Investment (₹)</label>
+                            <input type="number" id="sipAmount" value="5000" min="500" style="width: 100%; padding: 1rem; border: 2px solid var(--light-green); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--primary-emerald); font-weight: 600;">Investment Period (Years)</label>
+                            <input type="number" id="sipYears" value="10" min="1" max="50" style="width: 100%; padding: 1rem; border: 2px solid var(--light-green); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--primary-emerald); font-weight: 600;">Expected Annual Return (%)</label>
+                            <input type="number" id="sipRate" value="12" min="1" max="30" step="0.1" style="width: 100%; padding: 1rem; border: 2px solid var(--light-green); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <button onclick="calculateSIP()" style="width: 100%; background: var(--gradient-primary); color: white; padding: 1rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; margin-bottom: 2rem;">Calculate SIP</button>
+                        
+                        <div id="sipResults" style="background: var(--light-green); padding: 1.5rem; border-radius: 15px; text-align: center;">
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Total Investment: </strong>
+                                <span id="sipInvested" style="color: var(--primary-emerald); font-size: 1.2rem; font-weight: bold;">₹6,00,000</span>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Expected Returns: </strong>
+                                <span id="sipReturns" style="color: var(--secondary-gold); font-size: 1.2rem; font-weight: bold;">₹5,27,678</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Maturity Amount: </strong>
+                                <span id="sipMaturity" style="color: var(--primary-emerald); font-size: 1.4rem; font-weight: bold;">₹11,27,678</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar">PS</div>
-                    <h4>Priya Sharma</h4>
-                    <div class="team-role">Head of Investments</div>
-                    <p class="team-bio">CFA charterholder with expertise in portfolio management and risk assessment. Former VP at Axis AMC with stellar 15+ year track record.</p>
+
+                <!-- Lump Sum Calculator -->
+                <div class="calculator-card animate-on-scroll" style="background: white; border-radius: 25px; padding: 3rem 2.5rem; box-shadow: 0 15px 50px rgba(245, 158, 11, 0.1); transition: all 0.4s ease;">
+                    <h3 style="color: var(--navy-text); margin-bottom: 2rem; text-align: center; font-size: 1.8rem;">Lump Sum Calculator</h3>
+                    <div class="calculator-form">
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--secondary-gold); font-weight: 600;">Investment Amount (₹)</label>
+                            <input type="number" id="lumpAmount" value="100000" min="1000" style="width: 100%; padding: 1rem; border: 2px solid var(--soft-gold); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--secondary-gold); font-weight: 600;">Investment Period (Years)</label>
+                            <input type="number" id="lumpYears" value="10" min="1" max="50" style="width: 100%; padding: 1rem; border: 2px solid var(--soft-gold); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.8rem; color: var(--secondary-gold); font-weight: 600;">Expected Annual Return (%)</label>
+                            <input type="number" id="lumpRate" value="12" min="1" max="30" step="0.1" style="width: 100%; padding: 1rem; border: 2px solid var(--soft-gold); border-radius: 10px; font-size: 1rem; color: #333; background: white;">
+                        </div>
+                        <button onclick="calculateLumpSum()" style="width: 100%; background: var(--gradient-secondary); color: white; padding: 1rem; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; margin-bottom: 2rem;">Calculate Lump Sum</button>
+                        
+                        <div id="lumpResults" style="background: var(--soft-gold); padding: 1.5rem; border-radius: 15px; text-align: center;">
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Initial Investment: </strong>
+                                <span id="lumpInvested" style="color: var(--secondary-gold); font-size: 1.2rem; font-weight: bold;">₹1,00,000</span>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Expected Returns: </strong>
+                                <span id="lumpReturns" style="color: var(--primary-emerald); font-size: 1.2rem; font-weight: bold;">₹2,10,585</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--navy-text); font-size: 1.1rem;">Maturity Amount: </strong>
+                                <span id="lumpMaturity" style="color: var(--secondary-gold); font-size: 1.4rem; font-weight: bold;">₹3,10,585</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar">RG</div>
-                    <h4>Rajesh Gupta</h4>
-                    <div class="team-role">Head of Technology</div>
-                    <p class="team-bio">Technology visionary with 22+ years experience building scalable fintech platforms at leading organizations including Microsoft and Infosys.</p>
+            </div>
+
+            <!-- Investment Tips -->
+            <div style="margin-top: 5rem;">
+                <div class="section-title animate-on-scroll" style="margin-bottom: 3rem;">
+                    <h2>Smart Investment Tips</h2>
+                    <p>Professional guidance and best practices for successful mutual fund investing to maximize your wealth creation potential</p>
                 </div>
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar">SK</div>
-                    <h4>Sunita Krishnan</h4>
-                    <div class="team-role">Head of Operations</div>
-                    <p class="team-bio">Operations excellence expert ensuring seamless client experience. Former COO at leading mutual fund house with 20+ years expertise.</p>
+                <div style="background: rgba(16, 185, 129, 0.05); padding: 3rem; border-radius: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">💡</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Start Early</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Begin SIP investments early to leverage the power of compounding for maximum wealth creation.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Diversify Portfolio</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Invest across different fund categories and AMCs to reduce risk and optimize returns.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">⏰</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Stay Invested</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Maintain long-term investment discipline and avoid frequent switching for better outcomes.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Goal-Based Investing</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Align your investments with specific financial goals for focused wealth creation.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Regular Review</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Monitor portfolio performance annually and rebalance based on changing life goals and market conditions.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="font-size: 2rem; margin-bottom: 1rem;">💰</div>
+                            <h4 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">Increase SIP Gradually</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Step up your SIP amount by 10-15% annually as your income grows to accelerate wealth building.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1299,8 +1423,8 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <h2>Get In Touch</h2>
-                <p>Ready to start your wealth building journey? Contact our expert team for personalized investment guidance</p>
+                <h2>Get Started with Mutual Funds</h2>
+                <p>Ready to begin your investment journey? Contact our mutual fund experts for personalized advice and paperless onboarding</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info animate-on-scroll">
@@ -1309,23 +1433,23 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <strong>Email</strong><br>
-                            support@wealthpro.in<br>
-                            partners@wealthpro.in
+                            invest@wealthpro.in<br>
+                            support@wealthpro.in
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📞</div>
                         <div>
                             <strong>Phone</strong><br>
-                            1800-123-4567<br>
+                            1800-MF-INVEST (1800-634-6878)<br>
                             +91-80-4567-8900
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <strong>Address</strong><br>
-                            WealthPro Financial Services<br>
+                            <strong>Office Address</strong><br>
+                            WealthPro MF Distribution Services<br>
                             Bangalore, Karnataka 560001
                         </div>
                     </div>
@@ -1334,7 +1458,15 @@
                         <div>
                             <strong>Business Hours</strong><br>
                             Monday - Saturday: 9:00 AM - 6:00 PM<br>
-                            Sunday: Closed
+                            Sunday: 10:00 AM - 4:00 PM
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏦</div>
+                        <div>
+                            <strong>AMC Partnerships</strong><br>
+                            HDFC MF | SBI MF | Aditya Birla MF<br>
+                            Motilal Oswal MF | Nippon India MF
                         </div>
                     </div>
                     <div class="social-links">
@@ -1359,14 +1491,21 @@
                             <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="How can we help you?" required>
+                            <label for="investment">Investment Interest</label>
+                            <select id="investment" name="investment" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 15px; background: rgba(255, 255, 255, 0.1); color: white; font-size: 1rem;">
+                                <option value="">Select Investment Type</option>
+                                <option value="sip">SIP Investment</option>
+                                <option value="lumpsum">Lump Sum Investment</option>
+                                <option value="elss">ELSS Tax Saver</option>
+                                <option value="insurance">Life Insurance</option>
+                                <option value="consultation">Investment Consultation</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your investment goals and how we can assist you..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your investment goals and preferred AMCs..." required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn">Start My Investment Journey</button>
                     </form>
                 </div>
             </div>
@@ -1378,42 +1517,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>WealthPro</h3>
-                    <p>Leading Individual Mutual Fund Distributor helping investors build wealth through smart financial planning, expert guidance, and cutting-edge technology solutions.</p>
+                    <h3>WealthPro MF Distribution</h3>
+                    <p>Expert Mutual Fund Distributor specializing in equity, debt, and hybrid funds from India's leading AMCs with complete paperless processes.</p>
                     <p><strong>AMFI Registration:</strong> ARN-12345678</p>
-                    <p><strong>SEBI Registration:</strong> INH000001234</p>
+                    <p><strong>Empanelled with 5 Major AMCs</strong></p>
                 </div>
                 <div class="footer-section">
                     <h3>Investment Options</h3>
                     <a href="#">Equity Mutual Funds</a>
                     <a href="#">Debt Mutual Funds</a>
-                    <a href="#">SIP Calculator</a>
-                    <a href="#">Tax Saving (ELSS)</a>
-                    <a href="#">Portfolio Tracker</a>
-                    <a href="#">Goal-Based Investing</a>
+                    <a href="#">ELSS Tax Saver Funds</a>
+                    <a href="#">SIP Investments</a>
+                    <a href="#">Lump Sum Investments</a>
+                    <a href="#">Insurance Plans</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Support & Resources</h3>
-                    <a href="#">Help Center</a>
-                    <a href="#">Investment Guide</a>
-                    <a href="#">Partner Support</a>
-                    <a href="#">Download Mobile App</a>
-                    <a href="#">Complete KYC Online</a>
-                    <a href="#">Market Updates</a>
+                    <h3>Our AMC Partners</h3>
+                    <a href="#">HDFC Mutual Fund</a>
+                    <a href="#">SBI Mutual Fund</a>
+                    <a href="#">Aditya Birla Mutual Fund</a>
+                    <a href="#">Motilal Oswal Mutual Fund</a>
+                    <a href="#">Nippon India Mutual Fund</a>
+                    <a href="#">View All Schemes</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Get In Touch</h3>
-                    <p>📧 support@wealthpro.in</p>
-                    <p>📧 partners@wealthpro.in</p>
-                    <p>📞 1800-123-4567</p>
-                    <p>📞 +91-80-4567-8900</p>
-                    <p>📍 Bangalore, Karnataka 560001</p>
-                    <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    <h3>Support & Tools</h3>
+                    <a href="#calculators">SIP Calculator</a>
+                    <a href="#calculators">Lump Sum Calculator</a>
+                    <a href="#">Download AMC Apps</a>
+                    <a href="#">KYC Documentation</a>
+                    <a href="#">NAV & Performance</a>
+                    <a href="#">Contact Support</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 WealthPro Financial Services Pvt. Ltd. All rights reserved. | SEBI Registration: INH000001234 | AMFI Registration: ARN-12345678</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">Mutual Fund investments are subject to market risks. Please read all scheme related documents carefully before investing. Past performance is not indicative of future returns.</p>
+                <p>&copy; 2024 WealthPro Mutual Fund Distribution Services. All rights reserved. | AMFI Registration: ARN-12345678</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem;">Mutual Fund investments are subject to market risks. Please read all scheme related documents carefully before investing. Past performance is not indicative of future returns.</p>
             </div>
         </div>
     </footer>
@@ -1477,6 +1616,7 @@
             counters.forEach(counter => {
                 const numberElement = counter.querySelector('.stat-number');
                 const target = parseInt(counter.getAttribute('data-target'));
+                const type = counter.getAttribute('data-type');
                 
                 if (!counter.classList.contains('animated')) return;
                 
@@ -1485,8 +1625,12 @@
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        if (target === 4) {
-                            numberElement.textContent = '₹' + target + 'L';
+                        if (target === 5 && type === 'cr') {
+                            numberElement.textContent = '₹' + target + 'Cr+';
+                        } else if (target === 5 && !type) {
+                            numberElement.textContent = target;
+                        } else if (target === 100) {
+                            numberElement.textContent = target + '%';
                         } else if (target >= 1000) {
                             numberElement.textContent = Math.floor(target / 1000) + 'K+';
                         } else {
@@ -1494,8 +1638,12 @@
                         }
                         clearInterval(timer);
                     } else {
-                        if (target === 4) {
-                            numberElement.textContent = '₹' + Math.floor(current) + 'L';
+                        if (target === 5 && type === 'cr') {
+                            numberElement.textContent = '₹' + Math.floor(current) + 'Cr+';
+                        } else if (target === 5 && !type) {
+                            numberElement.textContent = Math.floor(current);
+                        } else if (target === 100) {
+                            numberElement.textContent = Math.floor(current) + '%';
                         } else if (target >= 1000) {
                             numberElement.textContent = Math.floor(current / 1000) + 'K+';
                         } else {
@@ -1562,19 +1710,68 @@
             });
         });
 
-        // Interactive team members
-        document.querySelectorAll('.team-member').forEach(member => {
-            member.addEventListener('click', function() {
-                // Add click interaction for team members
-                const bio = this.querySelector('.team-bio');
-                if (bio.style.maxHeight === 'none') {
-                    bio.style.maxHeight = '100px';
-                    bio.style.overflow = 'hidden';
-                } else {
-                    bio.style.maxHeight = 'none';
-                    bio.style.overflow = 'visible';
-                }
+        // SIP Calculator Function
+        function calculateSIP() {
+            const monthlyAmount = parseFloat(document.getElementById('sipAmount').value);
+            const years = parseFloat(document.getElementById('sipYears').value);
+            const annualRate = parseFloat(document.getElementById('sipRate').value);
+            
+            const monthlyRate = annualRate / 12 / 100;
+            const months = years * 12;
+            
+            // SIP Future Value Formula
+            const futureValue = monthlyAmount * (((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate));
+            
+            const totalInvested = monthlyAmount * months;
+            const returns = futureValue - totalInvested;
+            
+            document.getElementById('sipInvested').textContent = `₹${totalInvested.toLocaleString('en-IN')}`;
+            document.getElementById('sipReturns').textContent = `₹${Math.round(returns).toLocaleString('en-IN')}`;
+            document.getElementById('sipMaturity').textContent = `₹${Math.round(futureValue).toLocaleString('en-IN')}`;
+            
+            // Add animation effect
+            document.getElementById('sipResults').style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                document.getElementById('sipResults').style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Lump Sum Calculator Function
+        function calculateLumpSum() {
+            const principal = parseFloat(document.getElementById('lumpAmount').value);
+            const years = parseFloat(document.getElementById('lumpYears').value);
+            const annualRate = parseFloat(document.getElementById('lumpRate').value);
+            
+            // Compound Interest Formula: A = P(1 + r/n)^(nt)
+            const amount = principal * Math.pow((1 + annualRate / 100), years);
+            const returns = amount - principal;
+            
+            document.getElementById('lumpInvested').textContent = `₹${principal.toLocaleString('en-IN')}`;
+            document.getElementById('lumpReturns').textContent = `₹${Math.round(returns).toLocaleString('en-IN')}`;
+            document.getElementById('lumpMaturity').textContent = `₹${Math.round(amount).toLocaleString('en-IN')}`;
+            
+            // Add animation effect
+            document.getElementById('lumpResults').style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                document.getElementById('lumpResults').style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Real-time calculation on input change
+        document.addEventListener('DOMContentLoaded', function() {
+            // SIP Calculator real-time updates
+            ['sipAmount', 'sipYears', 'sipRate'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateSIP);
             });
+            
+            // Lump Sum Calculator real-time updates
+            ['lumpAmount', 'lumpYears', 'lumpRate'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateLumpSum);
+            });
+            
+            // Initial calculations
+            calculateSIP();
+            calculateLumpSum();
         });
 
         // Features list interactivity
