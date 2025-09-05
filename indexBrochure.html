@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Your Future - Mutual Fund Investment Guide | CrownWealth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-emerald: #10B981;
+            --primary-jade: #059669;
+            --secondary-gold: #F59E0B;
+            --accent-amber: #D97706;
+            --navy-text: #1F2937;
+            --light-green: #ECFDF5;
+            --soft-gold: #FEF3C7;
+            --gradient-primary: linear-gradient(135deg, #10B981, #059669);
+            --gradient-secondary: linear-gradient(135deg, #F59E0B, #D97706);
+            --grid-max-width: 1200px;
+            --grid-gap: 2rem;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--navy-text);
+            background: #fff;
+        }
+
+        .container {
+            max-width: var(--grid-max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 40px 0;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* Consistent Grid System */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--grid-gap);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--grid-gap);
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--grid-gap);
+        }
+
+        /* Page 1 - Hero & Introduction */
+        .hero-page {
+            background: var(--gradient-primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.3) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--soft-gold);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--secondary-gold);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Page 2 - Comparison */
+        .comparison-page {
+            background: #f8f9fa;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--navy-text);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .investment-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary-emerald);
+            position: relative;
+        }
+
+        .investment-card.poor {
+            border-top-color: #ef4444;
+        }
+
+        .investment-card.average {
+            border-top-color: #f59e0b;
+        }
+
+        .investment-card.excellent {
+            border-top-color: var(--primary-emerald);
+        }
+
+        .investment-type {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--navy-text);
+            margin-bottom: 1rem;
+        }
+
+        .investment-details {
+            list-style: none;
+        }
+
+        .investment-details li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .investment-details li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary-emerald);
+            border-radius: 50%;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .investment-card.poor .investment-details li::before {
+            background: #ef4444;
+        }
+
+        .investment-card.average .investment-details li::before {
+            background: #f59e0b;
+        }
+
+        .returns-comparison {
+            background: var(--light-green);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .returns-title {
+            font-size: 1.5rem;
+            color: var(--navy-text);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .returns-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .returns-table th,
+        .returns-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .returns-table th {
+            background: var(--primary-emerald);
+            color: white;
+            font-weight: 600;
+        }
+
+        .returns-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .highlight {
+            background: var(--soft-gold) !important;
+            font-weight: bold;
+        }
+
+        /* Page 3 - Case Studies */
+        .case-study-page {
+            background: white;
+        }
+
+        .case-study {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary-gold);
+        }
+
+        .case-title {
+            font-size: 1.5rem;
+            color: var(--navy-text);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .character {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .character-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-emerald);
+            margin-bottom: 0.5rem;
+        }
+
+        .character-choice {
+            font-size: 1rem;
+            color: var(--navy-text);
+            margin-bottom: 1rem;
+        }
+
+        .character-results {
+            background: var(--light-green);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .result-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-emerald);
+        }
+
+        .calculation-box {
+            background: var(--soft-gold);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .calc-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--navy-text);
+        }
+
+        /* Page 4 - Action Page */
+        .action-page {
+            background: linear-gradient(135deg, var(--navy-text) 0%, #374151 100%);
+            color: white;
+        }
+
+        .action-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-gold);
+            text-align: center;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-gold);
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .page {
+                padding: 20px 0;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .page {
+                margin: 0;
+                padding: 20px;
+                page-break-after: always;
+            }
+            
+            .page:last-child {
+                page-break-after: avoid;
+            }
+            .section, .case-study, .comparison-page, .hero-page, .action-page, table {
+                    page-break-inside: avoid !important;
+            }
+            .section {
+                page-break-before: always; /* start each section on a new page */
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Hero & Introduction -->
+    <div class="page hero-page">
+        <div class="hero-content">
+            <div class="container">
+                <div class="logo">CrownWealth</div>
+                <h1 class="hero-title">Secure Your Financial Future</h1>
+                <p class="hero-subtitle">Build Retirement Wealth & Achieve Financial Goals Through Smart Mutual Fund Investing</p>
+                
+                <div class="grid-4">
+                    <div class="stat-card">
+                        <span class="stat-number">15%</span>
+                        <div class="stat-label">Average Annual Returns</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5-10 Yrs</span>
+                        <div class="stat-label">Ideal Investment Horizon</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">₹5,000</span>
+                        <div class="stat-label">Start Your SIP Today</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Tax Efficient</span>
+                        <div class="stat-label">Save on Taxes (80C)</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">Why Mutual Funds are Perfect for Investors</h2>
+                    <div class="grid-2">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎯</div>
+                            <div class="benefit-title">Goal-Based Investing</div>
+                            <p>Whether it's retirement planning, children's education, or wealth creation - mutual funds help achieve your specific financial goals systematically.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">💰</div>
+                            <div class="benefit-title">Beat Inflation Effectively</div>
+                            <p>With 15% average returns, mutual funds help your money grow faster than inflation, preserving and enhancing your purchasing power.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🛡️</div>
+                            <div class="benefit-title">Professional Management</div>
+                            <p>Expert fund managers handle your investments, perfect for busy professionals who don't have time for daily market monitoring.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">📊</div>
+                            <div class="benefit-title">Flexible Investment Options</div>
+                            <p>Start with ₹5,000 monthly SIP or invest lumpsum from ₹1 Lakh. Choose equity, debt, or balanced funds based on your risk profile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Investment Comparison -->
+    <div class="page comparison-page">
+        <div class="container">
+            <h1 class="page-title">Smart Investment Comparison</h1>
+            
+            <div class="grid-4">
+                <div class="investment-card poor">
+                    <h3 class="investment-type">🏦 Bank FDs</h3>
+                    <ul class="investment-details">
+                        <li>Returns: 6-7% annually</li>
+                        <li>Post-tax returns: 4-5%</li>
+                        <li>Loses to inflation</li>
+                        <li>Lock-in penalties</li>
+                        <li>No wealth creation</li>
+                    </ul>
+                </div>
+                
+                <div class="investment-card poor">
+                    <h3 class="investment-type">🏠 Real Estate</h3>
+                    <ul class="investment-details">
+                        <li>High investment: ₹50L+</li>
+                        <li>Poor liquidity</li>
+                        <li>Maintenance costs</li>
+                        <li>Location risks</li>
+                        <li>Complex taxation</li>
+                    </ul>
+                </div>
+                
+                <div class="investment-card average">
+                    <h3 class="investment-type">📈 Direct Stocks</h3>
+                    <ul class="investment-details">
+                        <li>High risk & volatility</li>
+                        <li>Needs expertise</li>
+                        <li>Time consuming</li>
+                        <li>Emotional decisions</li>
+                        <li>No diversification</li>
+                    </ul>
+                </div>
+                
+                <div class="investment-card excellent">
+                    <h3 class="investment-type">🎯 Mutual Funds</h3>
+                    <ul class="investment-details">
+                        <li>Returns: 15% average</li>
+                        <li>Start: ₹5,000/month</li>
+                        <li>High liquidity</li>
+                        <li>Professional management</li>
+                        <li>Tax benefits (ELSS)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="returns-comparison">
+                <h3 class="returns-title">5-Year Investment Comparison (Monthly SIP: ₹10,000)</h3>
+                <table class="returns-table">
+                    <thead>
+                        <tr>
+                            <th>Investment Type</th>
+                            <th>Total Invested</th>
+                            <th>Returns Rate</th>
+                            <th>Final Amount</th>
+                            <th>Profit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Recurring Deposit</td>
+                            <td>₹6,00,000</td>
+                            <td>6.5%</td>
+                            <td>₹7,08,737</td>
+                            <td>₹1,08,737</td>
+                        </tr>
+                        <tr>
+                            <td>Fixed Deposit</td>
+                            <td>₹6,00,000</td>
+                            <td>7%</td>
+                            <td>₹7,17,434</td>
+                            <td>₹1,17,434</td>
+                        </tr>
+                        <tr>
+                            <td>PPF</td>
+                            <td>₹6,00,000</td>
+                            <td>7.1%</td>
+                            <td>₹7,19,532</td>
+                            <td>₹1,19,532</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>Mutual Funds (SIP)</strong></td>
+                            <td><strong>₹6,00,000</strong></td>
+                            <td><strong>15%</strong></td>
+                            <td><strong>₹8,93,576</strong></td>
+                            <td><strong>₹2,93,576</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="returns-comparison" style="margin-top: 2rem;">
+                <h3 class="returns-title">10-Year Investment Comparison (Monthly SIP: ₹5,000)</h3>
+                <table class="returns-table">
+                    <thead>
+                        <tr>
+                            <th>Investment Type</th>
+                            <th>Total Invested</th>
+                            <th>Returns Rate</th>
+                            <th>Final Amount</th>
+                            <th>Profit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Recurring Deposit</td>
+                            <td>₹6,00,000</td>
+                            <td>6.5%</td>
+                            <td>₹8,37,286</td>
+                            <td>₹2,37,286</td>
+                        </tr>
+                        <tr>
+                            <td>Fixed Deposit</td>
+                            <td>₹6,00,000</td>
+                            <td>7%</td>
+                            <td>₹8,51,584</td>
+                            <td>₹2,51,584</td>
+                        </tr>
+                        <tr>
+                            <td>PPF</td>
+                            <td>₹6,00,000</td>
+                            <td>7.1%</td>
+                            <td>₹8,55,094</td>
+                            <td>₹2,55,094</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>Mutual Funds (SIP)</strong></td>
+                            <td><strong>₹6,00,000</strong></td>
+                            <td><strong>15%</strong></td>
+                            <td><strong>₹13,93,286</strong></td>
+                            <td><strong>₹7,93,286</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="margin-top: 1.5rem; text-align: center; font-weight: bold; color: var(--primary-emerald);">
+                    Mutual Funds deliver 3x MORE returns than traditional investments!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Case Studies -->
+    <div class="page case-study-page">
+        <div class="container">
+            <h1 class="page-title">Real Success Stories</h1>
+            
+            <div class="case-study">
+                <h3 class="case-title">📈 Case Study 1: Retirement Planning at 40</h3>
+                <p><strong>Scenario:</strong> Two 40-year-old colleagues, Rajesh and Suresh, plan for early retirement at 50 with different approaches.</p>
+                
+                <div class="grid-2">
+                    <div class="character">
+                        <div class="character-name">👨‍💼 Rajesh's Choice</div>
+                        <div class="character-choice">Bank RD @ 6.5% annual return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Investment Plan:</div>
+                            Monthly Investment: ₹10,000<br>
+                            Total Invested: ₹12,00,000<br>
+                            <strong>Final Amount: ₹16,74,572</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Retirement Corpus:</div>
+                            <div class="result-amount">₹16.75 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #666;">Barely beats inflation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="character">
+                        <div class="character-name">👨‍💼 Suresh's Choice</div>
+                        <div class="character-choice">Equity Mutual Funds @ 15% annual return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Investment Plan:</div>
+                            Monthly Investment: ₹10,000<br>
+                            Total Invested: ₹12,00,000<br>
+                            <strong>Final Amount: ₹27,86,572</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Retirement Corpus:</div>
+                            <div class="result-amount">₹27.87 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #10B981;">66% more wealth created!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--light-green); padding: 1.5rem; border-radius: 10px; text-align: center; font-size: 1.2rem; font-weight: bold; color: var(--primary-emerald); margin-top: 2rem;">
+                    🎯 Suresh created ₹11.12 LAKHS MORE wealth in just 10 years!
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3 class="case-title">🎓 Case Study 2: Child's Education Planning</h3>
+                <p><strong>Scenario:</strong> Priya (38) needs to save for her daughter's higher education in 5 years. Comparing FD vs Mutual Fund SIP.</p>
+                
+                <div class="grid-2">
+                    <div class="character">
+                        <div class="character-name">🏦 Fixed Deposit Option</div>
+                        <div class="character-choice">Monthly FD @ 7% return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Education Fund:</div>
+                            Monthly Investment: ₹10,000<br>
+                            Total Invested: ₹6,00,000<br>
+                            Post-tax Returns: ₹5,02,204<br>
+                            <strong>Final Amount: ₹7,02,204</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Education Fund:</div>
+                            <div class="result-amount">₹7.02 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #666;">May fall short of inflation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="character">
+                        <div class="character-name">📊 Mutual Fund SIP</div>
+                        <div class="character-choice">Balanced/Equity Fund @ 15% return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Education Fund:</div>
+                            Monthly SIP: ₹10,000<br>
+                            Total Invested: ₹6,00,000<br>
+                            Returns: ₹2,93,576<br>
+                            <strong>Final Amount: ₹8,93,576</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Education Fund:</div>
+                            <div class="result-amount">₹8.94 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #10B981;">27% more funds available!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3 class="case-title">💰 Case Study 3: ₹1 Lakh Lumpsum Investment</h3>
+                <p><strong>Scenario:</strong> Vikram (42) received a ₹1 Lakh bonus. Comparing lumpsum investment options for 5 and 10 years.</p>
+                
+                <div class="grid-2">
+                    <div class="character">
+                        <div class="character-name">🏦 Bank FD @ 7%</div>
+                        <div class="character-choice">Traditional Fixed Deposit</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Growth:</div>
+                            Investment: ₹1,00,000<br>
+                            Value after 5 years: ₹1,40,255<br>
+                            Post-tax (30%): ₹1,28,178<br>
+                            <strong>Net Gain: ₹28,178</strong>
+                        </div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Growth:</div>
+                            Investment: ₹1,00,000<br>
+                            Value after 10 years: ₹1,96,715<br>
+                            Post-tax (30%): ₹1,67,700<br>
+                            <strong>Net Gain: ₹67,700</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="character">
+                        <div class="character-name">📈 Mutual Fund @ 15%</div>
+                        <div class="character-choice">Equity/Balanced Fund</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Growth:</div>
+                            Investment: ₹1,00,000<br>
+                            Value after 5 years: ₹2,01,136<br>
+                            Post LTCG tax: ₹1,88,494<br>
+                            <strong>Net Gain: ₹88,494</strong>
+                        </div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Growth:</div>
+                            Investment: ₹1,00,000<br>
+                            Value after 10 years: ₹4,04,556<br>
+                            Post LTCG tax: ₹3,66,400<br>
+                            <strong>Net Gain: ₹2,66,400</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--soft-gold); padding: 1.5rem; border-radius: 10px; text-align: center; margin-top: 1.5rem;">
+                    <strong>₹1 Lakh grows to ₹4.04 Lakhs in Mutual Funds vs ₹1.97 Lakhs in FD over 10 years!</strong>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3 class="case-title">🎯 Case Study 4: ₹3 Lakh Lumpsum Investment</h3>
+                <p><strong>Scenario:</strong> Meera (45) inherited ₹3 Lakhs. Evaluating best investment options for retirement planning.</p>
+                
+                <div class="grid-2">
+                    <div class="character">
+                        <div class="character-name">🏦 Traditional Options</div>
+                        <div class="character-choice">FD/PPF @ 7-8% return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Projection:</div>
+                            Investment: ₹3,00,000<br>
+                            FD @ 7%: ₹4,20,765<br>
+                            PPF @ 8%: ₹4,40,799<br>
+                            <strong>Average Gain: ₹1,30,000</strong>
+                        </div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Projection:</div>
+                            Investment: ₹3,00,000<br>
+                            FD @ 7%: ₹5,90,145<br>
+                            PPF @ 8%: ₹6,47,678<br>
+                            <strong>Average Gain: ₹3,19,000</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="character">
+                        <div class="character-name">🚀 Mutual Fund Portfolio</div>
+                        <div class="character-choice">Diversified Equity @ 15%</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">5-Year Projection:</div>
+                            Investment: ₹3,00,000<br>
+                            Value: ₹6,03,408<br>
+                            Post LTCG: ₹5,65,482<br>
+                            <strong>Net Gain: ₹2,65,482</strong>
+                        </div>
+                        <div class="calculation-box">
+                            <div class="calc-title">10-Year Projection:</div>
+                            Investment: ₹3,00,000<br>
+                            Value: ₹12,13,668<br>
+                            Post LTCG: ₹10,99,201<br>
+                            <strong>Net Gain: ₹7,99,201</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--light-green); padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem;">
+                    <div class="grid-3">
+                        <div style="text-align: center;">
+                            <strong>5-Year Returns</strong><br>
+                            MF: ₹6.03 Lakhs<br>
+                            FD: ₹4.21 Lakhs<br>
+                            <span style="color: var(--primary-emerald);">43% Higher!</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <strong>10-Year Returns</strong><br>
+                            MF: ₹12.14 Lakhs<br>
+                            FD: ₹5.90 Lakhs<br>
+                            <span style="color: var(--primary-emerald);">2X Returns!</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <strong>Tax Efficiency</strong><br>
+                            MF: 12.5% LTCG<br>
+                            FD: 30% Tax<br>
+                            <span style="color: var(--primary-emerald);">Save 58% Tax!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3 class="case-title">📊 Case Study 5: Combined Strategy - SIP + Lumpsum</h3>
+                <p><strong>Scenario:</strong> Amit (38) has ₹1 Lakh lumpsum + can invest ₹5,000 monthly. Planning for 10 years.</p>
+                
+                <div class="grid-2">
+                    <div class="character">
+                        <div class="character-name">🏦 Bank Deposits</div>
+                        <div class="character-choice">FD + RD @ 7% return</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">Combined Investment:</div>
+                            Lumpsum FD: ₹1,00,000<br>
+                            Monthly RD: ₹5,000 × 120<br>
+                            Total Invested: ₹7,00,000<br>
+                            <strong>10-Year Value: ₹10,48,300</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Total Returns:</div>
+                            <div class="result-amount">₹10.48 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #666;">Returns: ₹3.48 Lakhs</div>
+                        </div>
+                    </div>
+                    
+                    <div class="character">
+                        <div class="character-name">🎯 Mutual Funds</div>
+                        <div class="character-choice">Lumpsum + SIP @ 15%</div>
+                        <div class="calculation-box">
+                            <div class="calc-title">Combined Strategy:</div>
+                            Lumpsum MF: ₹1,00,000<br>
+                            Monthly SIP: ₹5,000 × 120<br>
+                            Total Invested: ₹7,00,000<br>
+                            <strong>10-Year Value: ₹18,37,842</strong>
+                        </div>
+                        <div class="character-results">
+                            <div>Total Returns:</div>
+                            <div class="result-amount">₹18.38 Lakhs</div>
+                            <div style="font-size: 0.9rem; color: #10B981;">Returns: ₹11.38 Lakhs!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--soft-gold); padding: 1.5rem; border-radius: 10px; text-align: center; margin-top: 1.5rem;">
+                    <strong>Combined Strategy delivers ₹7.90 Lakhs MORE than traditional savings!</strong><br>
+                    <span style="font-size: 0.9rem;">Perfect for investors with both savings and monthly surplus</span>
+                </div>
+            </div>
+
+            <div style="background: var(--light-green); padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                <h3 style="color: var(--navy-text); margin-bottom: 1rem; text-align: center;">⚡ Key Benefits for Investors</h3>
+                <div class="grid-3">
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary-emerald);">Tax Savings</div>
+                        <div>Up to ₹46,800/year with ELSS funds under 80C</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary-emerald);">Liquidity</div>
+                        <div>Access your money in just 1-2 days when needed</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary-emerald);">Compounding</div>
+                        <div>15% returns double your money every 5 years</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-jade)); color: white; padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; text-align: center;">💡 Lumpsum Investment Quick Reference</h3>
+                <div class="grid-2" style="gap: 3rem;">
+                    <div>
+                        <h4 style="margin-bottom: 1rem; color: var(--soft-gold);">₹1 Lakh Lumpsum Growth</h4>
+                        <table style="width: 100%; color: white; font-size: 0.9rem;">
+                            <tr>
+                                <td>5 Years:</td>
+                                <td style="text-align: right;">₹2.01 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td>10 Years:</td>
+                                <td style="text-align: right;">₹4.05 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td>15 Years:</td>
+                                <td style="text-align: right;">₹8.14 Lakhs</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 1rem; color: var(--soft-gold);">₹3 Lakh Lumpsum Growth</h4>
+                        <table style="width: 100%; color: white; font-size: 0.9rem;">
+                            <tr>
+                                <td>5 Years:</td>
+                                <td style="text-align: right;">₹6.03 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td>10 Years:</td>
+                                <td style="text-align: right;">₹12.14 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td>15 Years:</td>
+                                <td style="text-align: right;">₹24.42 Lakhs</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem; font-size: 1.1rem; font-weight: bold;">
+                    Start Today: Your Money Doubles Every 5 Years at 15% Returns!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Call to Action -->
+    <div class="page action-page">
+        <div class="container">
+            <h1 class="action-title">Start Your Wealth Journey Today</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; text-align: center;">
+                Join smart investors who are securing their financial future through disciplined mutual fund investing
+            </p>
+
+            <div class="grid-4">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Free Consultation</div>
+                    <p>Get personalized advice based on your age, goals, and risk profile</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Quick KYC</div>
+                    <p>Complete paperless KYC in 10 minutes with Aadhaar and PAN</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Fund Selection</div>
+                    <p>Choose from top-performing funds suited for investors</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Start SIP</div>
+                    <p>Begin with ₹5,000-10,000/month and watch your wealth grow</p>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 style="color: var(--secondary-gold); margin-bottom: 1rem; text-align: center;">Get Expert Guidance Now</h2>
+                <p style="margin-bottom: 2rem; text-align: center;">Our advisors specialize in retirement and goal-based planning.</p>
+                
+                <div class="grid-4">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div><strong>Call Us</strong></div>
+                        <div>+91-7410829111</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div><strong>Email Us</strong></div>
+                        <div>crownwealthmf@gmail.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div><strong>Online Tools</strong></div>
+                        <div>Retirement Calculator</div>
+                        <div>Goal Planning Tool</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div><strong>Track Progress</strong></div>
+                        <div>Mobile App</div>
+                        <div>Monthly Reports</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3 style="color: var(--secondary-gold); margin-bottom: 1.5rem; text-align: center;">Our Trusted AMC Partners</h3>
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; max-width: 800px; margin: 0 auto;">
+                    <div class="partner-card">HDFC Mutual Fund</div>
+                    <div class="partner-card">SBI Mutual Fund</div>
+                    <div class="partner-card">Aditya Birla MF</div>
+                    <div class="partner-card">Motilal Oswal MF</div>
+                    <div class="partner-card">Nippon India MF</div>
+                   
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; text-align: center;">
+                <p><strong>CrownWealth Mutual Fund Distribution Services</strong></p>
+                <p>AMFI Registration: ARN-336069 | ANSHU SHARMA</p>
+                <p>Office: 102, Okay Plus Tower, Hathroighadi, Jaipur, Rajasthan 302006</p>
+                <p>Contact: +91-7410829111 | crownwealthmf@gmail.com</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem;">
+                    Mutual Fund investments are subject to market risks. Please read all scheme related documents carefully. 
+                    Past performance is not indicative of future returns. Tax benefits are subject to changes in tax laws.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
